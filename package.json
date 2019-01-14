@@ -4,7 +4,14 @@
   "description": "Api endpoint to get a response",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node src/index.js",
+    "dev": "nodemon src/index.js  --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,20 @@
   "bugs": {
     "url": "https://github.com/shaminmeerankutty/give-me-response/issues"
   },
-  "homepage": "https://github.com/shaminmeerankutty/give-me-response#readme"
+  "homepage": "https://github.com/shaminmeerankutty/give-me-response#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "eslint": "^5.12.0",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "nodemon": "^1.18.9"
+  }
 }
